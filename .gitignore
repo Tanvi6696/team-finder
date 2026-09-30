@@ -1,0 +1,9 @@
+.env
+node_modules/
+__pycache__/
+dist/
+*.pyc
+venv/
+.mysql_root_pw
+
+database/_pw_reset_log.txt

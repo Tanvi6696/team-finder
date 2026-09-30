@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    @apply bg-page-light text-slate-800 dark:bg-page-dark dark:text-slate-100;
+  }
+}
+
+@layer components {
+  /* Frosted glass panel used across cards / drawers */
+  .glass {
+    @apply rounded-2xl border border-white/40 bg-white/60 shadow-glass
+      backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .glass-strong {
+    @apply rounded-2xl border border-white/50 bg-white/80 shadow-glass
+      backdrop-blur-2xl dark:border-white/10 dark:bg-ink-900/80;
+  }
+
+  .accent-text {
+    @apply bg-accent-gradient bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent-gradient
+      px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30
+      transition hover:brightness-110 active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200/80
+      bg-white/50 px-3 py-2 text-sm font-medium text-slate-700 transition
+      hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-slate-200
+      dark:hover:bg-white/10;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .skeleton {
+    @apply animate-shimmer rounded-xl bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200
+      bg-[length:200%_100%] dark:from-white/10 dark:via-white/5 dark:to-white/10;
+  }
+}
+
+/* Custom scrollbar for drawers */
+.drawer-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.drawer-scroll::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-indigo-300/60 dark:bg-violet-500/40;
+}
+
+@keyframes project-published-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(129, 140, 248, 0);
+  }
+  25%,
+  65% {
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.5), 0 0 36px rgba(139, 92, 246, 0.36);
+  }
+}
+
+.project-highlight {
+  animation: project-published-glow 2.2s ease-in-out;
+  scroll-margin: 8rem;
+}

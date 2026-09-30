@@ -1,0 +1,14 @@
+# Flask
+Flask==3.0.3
+flask-cors==4.0.1
+
+# MySQL
+mysql-connector-python==8.4.0
+
+# Load .env into os.environ
+python-dotenv==1.0.1
+
+# JWT auth tokens
+PyJWT==2.9.0
+
+# werkzeug is already a Flask dependency (generate_password_hash / check_password_hash)
