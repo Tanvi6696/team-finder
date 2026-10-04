@@ -15,7 +15,6 @@ import Discover from './pages/Discover'
 import InboxPage from './pages/Inbox'
 import Teammates from './pages/Teammates'
 import Network from './pages/Network'
-import SqlExplorer from './pages/SqlExplorer'
 import Profile from './pages/Profile'
 
 function AuthenticatedChrome() {
@@ -56,7 +55,6 @@ export default function App() {
                     <Route path="teammates" element={<Teammates />} />
                     <Route path="network" element={<Network />} />
                     <Route path="insights" element={<CampusInsights />} />
-                    <Route path="sql" element={<SqlExplorer />} />
                     <Route path="*" element={<Navigate to="/home" replace />} />
                   </Route>
                 </Route>

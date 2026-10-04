@@ -15,7 +15,6 @@ from routes.join_requests import join_requests_bp
 from routes.stats import stats_bp
 from routes.connections import connections_bp
 from routes.meta import meta_bp
-from routes.sql_explorer import sql_bp
 from routes.auth import auth_bp
 from routes.me import me_bp
 
@@ -34,7 +33,6 @@ def create_app():
     app.register_blueprint(stats_bp, url_prefix="/api")
     app.register_blueprint(connections_bp, url_prefix="/api")
     app.register_blueprint(meta_bp, url_prefix="/api")
-    app.register_blueprint(sql_bp, url_prefix="/api")
     app.register_blueprint(auth_bp, url_prefix="/api")
     app.register_blueprint(me_bp, url_prefix="/api")
 

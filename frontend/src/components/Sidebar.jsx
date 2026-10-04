@@ -22,7 +22,6 @@ const links = [
   { to: '/teammates', label: 'Teammates', icon: Users },
   { to: '/network', label: 'Network', icon: Share2 },
   { to: '/insights', label: 'Campus Insights', icon: BarChart3 },
-  { to: '/sql', label: 'SQL Explorer', icon: Terminal },
 ]
 
 function NavItems({ onNavigate }) {
